@@ -120,4 +120,5 @@ async def submit_password(phone: str):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    import waitress
+    waitress.serve(app, host='0.0.0.0', port=8080)

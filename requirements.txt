@@ -1,2 +1,2 @@
-quart
-telethon
+flask==2.3.3
+waitress==2.1.2
